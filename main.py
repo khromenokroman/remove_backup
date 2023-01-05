@@ -1,12 +1,13 @@
 #! /usr/bin/python3
 import os
 
-PATH = '/home/roma/Coding/remove_file/binari_test_folder' # Путь к вашей папке
-REMOVE = 5 #Сколько дней оставить
+PATH_PG = '/home/roma/Coding/remove_file/binari_test_folder' # Путь к вашей папке с бэкапами постгрес
+PATH_OS = '/home/roma/Coding/remove_file/' # Путь к вашей папке с бэкапами ос
+REMOVE = 5 #Сколько последних копий оставить
 
 # Получим список имен всего содержимого папки
 # и превратим их в абсолютные пути
-dir_list = [os.path.join(PATH, x) for x in os.listdir(PATH)]
+dir_list = [os.path.join(PATH_PG, x) for x in os.listdir(PATH_PG)]
 
 
 if dir_list:
